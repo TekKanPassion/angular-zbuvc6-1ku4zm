@@ -32,13 +32,13 @@
   <h4>Antique Automobile Floater Declarations</h4>
   <table>
     <tr>
-      <td>Number</td>
+      <td>#</td>
       <td>Question</td>
       <td>Answer</td>
     </tr>
 
     <tr *ngFor="let product of products; let i = index">
-      <td>{{ i }}</td>
+      <td>{{ i + 1 }}</td>
       <td>{{ product.questionText }}</td>
       <div *ngIf="true == true; else elseBlock">
         <textarea> </textarea>
@@ -48,4 +48,26 @@
       >
     </tr>
   </table>
+  <br />
+  <button>Generate Document</button>
+
+  <script>
+  downloadMyDoc=function(){
+    alert("a");
+    var user=$scope.user;
+
+    var content = 'Username: '+user.username+'phone: '+user.phone;
+    var blob = new Blob([ content ], { type : 'text/plain' });
+    $scope.url = (window.URL || window.webkitURL).createObjectURL( blob );
+
+}      
+</script>
+
+  <a
+    download="someX.doc"
+    ng-click="downloadMyDoc()"
+    ng-href="www.google.com"
+    tyle="cursor: pointer"
+    >Download</a>
+
 </div>

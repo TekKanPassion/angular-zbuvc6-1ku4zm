@@ -1,0 +1,119 @@
+<div>
+  <br />
+  <br />
+  <table>
+    <tr>
+      <td>Number</td>
+      <td>coverageName</td>
+      <td>coverageDescription</td>
+      <td>insuredEntity</td>
+      <td>peril</td>
+      <td>damage</td>
+      <td>trigger</td>
+      <td>Action</td>
+    </tr>
+    <!-- 
+    <tr ng-repeat="product in products">
+      <td>{{ product.coverageName }}</td>
+    </tr>
+   
+  </table>
+</div>
+-->
+
+    <tr *ngFor="let product of products; let i = index">
+      <td>{{ i }}</td>
+      <td>{{ product.coverageName }}</td>
+      <td>{{ product.coverageDescription }}</td>
+      <td>{{ product.insuredEntity }}</td>
+      <td>{{ product.peril }}</td>
+      <td>{{ product.damage }}</td>
+      <td>{{ product.trigger }}</td>
+    </tr>
+    <!--
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+  <button type="button" (click)="share()">Share</button>
+  <app-product-alerts [product]="product"> </app-product-alerts>
+</div>
+-->
+
+    <!--
+
+
+<br />
+<br />
+<h2> View 2 </h2>
+<div>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                <button type="button" ng-click="ctrl.expandAll(allExpanded = !allExpanded)">
+                    <span ng-bind="allExpanded ? '-' : '+'"></span>
+                </button>
+            </th>
+            <th>Coverage</th>
+            <th>Peril</th>
+            <th>Damage</th>
+            <th>Insurable Entity</th>
+            <th>Limit</th>
+    <th>Deductible</th>
+        </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let product of products; let i = index">
+            <td>
+                <button ng-click="expanded = !expanded" expand>
+                 <span ng-bind="expanded ? '-' : '+'"></span>
+                </button>
+            </td>
+            
+             <td>{{ product.coverageName }}</td>
+           
+             <td *ngFor="let cases of products; let j = index">
+           
+             </td>
+        </tr>
+        <tr ng-repeat-end ng-show="expanded">
+            <td></td>
+            <td colspan="6">
+                <table>
+                    <thead>
+                        <tr>
+                            
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="cases in product">
+                             
+                           
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</div>
+-->
+    <!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
+  </table>
+</div>

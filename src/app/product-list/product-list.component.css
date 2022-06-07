@@ -1,0 +1,21 @@
+
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

@@ -1,6 +1,7 @@
 <div>
   <br />
   <br />
+  <h1>Meta data for rendering forms</h1>
   <table>
     <tr>
       <td>Number</td>
@@ -22,33 +23,29 @@
       <td>{{ product.questionText }}</td>
       <td>{{ product.answerType }}</td>
       <td>{{ product.questionGrouping }}</td>
-    </tr>    
+    </tr>
   </table>
 
   <br />
   <br />
+  <h1>User Interface for data capture</h1>
+  <h4>Antique Automobile Floater Declarations</h4>
   <table>
     <tr>
       <td>Number</td>
-      <td>formId</td>
-      <td>formDescription</td>
-      <td>questionNumber</td>
-      <td>questionId</td>
-      <td>questionText</td>
-      <td>answerType</td>
-      <td>questionGrouping</td>
+      <td>Question</td>
+      <td>Answer</td>
     </tr>
 
     <tr *ngFor="let product of products; let i = index">
       <td>{{ i }}</td>
-      <td>{{ product.formId }}</td>
-      <td>{{ product.formDescription }}</td>
-      <td>{{ product.questionNumber }}</td>
-      <td>{{ product.questionId }}</td>
       <td>{{ product.questionText }}</td>
-      <td>{{ product.answerType }}</td>
-      <td>{{ product.questionGrouping }}</td>
-    </tr>    
+      <div *ngIf="true == true; else elseBlock">
+        <textarea> </textarea>
+      </div>
+      <ng-template #elseBlock
+        >Content to render when condition is false.</ng-template
+      >
+    </tr>
   </table>
-  
-  </div>
+</div>

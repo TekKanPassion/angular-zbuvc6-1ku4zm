@@ -4,13 +4,13 @@
   <table>
     <tr>
       <td>Number</td>
-      <td>coverageName</td>
-      <td>coverageDescription</td>
-      <td>insuredEntity</td>
-      <td>peril</td>
-      <td>damage</td>
-      <td>trigger</td>
-      <td>Action</td>
+      <td>formId</td>
+      <td>formDescription</td>
+      <td>questionNumber</td>
+      <td>questionId</td>
+      <td>questionText</td>
+      <td>answerType</td>
+      <td>questionGrouping</td>
     </tr>
     <!-- 
     <tr ng-repeat="product in products">
@@ -23,13 +23,14 @@
 
     <tr *ngFor="let product of products; let i = index">
       <td>{{ i }}</td>
-      <td>{{ product.coverageName }}</td>
-      <td>{{ product.coverageDescription }}</td>
-      <td>{{ product.insuredEntity }}</td>
-      <td>{{ product.peril }}</td>
-      <td>{{ product.damage }}</td>
-      <td>{{ product.trigger }}</td>
-    </tr>
+      <td>{{ product.formId }}</td>
+      <td>{{ product.formDescription }}</td>
+      <td>{{ product.questionNumber }}</td>
+      <td>{{ product.questionId }}</td>
+      <td>{{ product.questionText }}</td>
+      <td>{{ product.answerType }}</td>
+      <td>{{ product.questionGrouping }}</td>
+    </tr>    
     <!--
 <div *ngFor="let product of products">
   <h3>
@@ -116,4 +117,18 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
 -->
   </table>
+</div>
+<br>
+
+<div>
+<tr *ngFor="let product of products; let i = index">
+  <td>{{ i }}</td>
+  <td>{{ product.formId }}</td>
+  <td>{{ product.formDescription }}</td>
+  <td>{{ product.questionNumber }}</td>
+  <td>{{ product.questionId }}</td>
+  <td>{{ product.questionText }}</td>
+  <td>{{ product.answerType }}</td>
+  <td>{{ product.questionGrouping }}</td>
+</tr>
 </div>

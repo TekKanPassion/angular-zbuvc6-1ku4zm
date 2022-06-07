@@ -15,58 +15,37 @@ export interface Product {
   attachmentPoint: number;
   description: string;
   coverageRelationToCase: string;
+
+  formId: string;
+  formName: string;
+  formDescription: string;
+  questionNumber: string;
+  questionId: string;
+  questionText: string;
+  answerType: string;
+  questionGrouping: string;
 }
 
 export const products = [
   {
-    coverageUuid: 'large-corp-property-felxa-pd/1600011125',
-    coverageName: 'Coverage_Large Corp Property_FLEXA (PD)',
-    coverageType: 'main-coverage',
-    coverageDescription:
-      'Direct physical loss or direct physical damage to tangible covered property on described premises resulting from Fire incl. Smoke, Lightning, Explosion and Aircraft Impact. ',
-    insuredEntity:
-      ' Content - Money - Electric and electronic devices - Stock - Valuable - Machinery - Building',
-    peril: 'Fire incl. Smoke , Lightning, Explosion, Aircraft Impact, Smoke',
-    damage: 'Material Damage',
-    trigger: 'Occurrence',
+    formId: '8748250C5D6AD7B48825774D005C4DBB',
+    formName: 'AA 6870DEC 05 10',
+    formDescription: 'ANTIQUE AUTOMOBILE FLOATER DECLARATIONS',
+    questionNumber: '1',
+    questionId: 'i_62A66',
+    questionText: 'Theft Deductible $ ',
+    answerType: 'Text',
+    questionGrouping: 'Schedule of Coverage',
   },
   {
-    coverageUuid: 'large-corp-property-fire-pd/1600011125',
-    coverageName: 'Coverage_Large Corp Property_Fire (PD)',
-    coverageType: 'sub-coverage',
-    parentCoverageRef: 'large-corp-property-felxa-pd/1600011125',
-    coverageDescription:
-      'Direct physical loss or direct physical damage to tangible covered property on described premises resulting from fire is a process of burning which produces flames that send out heat and light and might produce smoke',
-    insuredEntity:
-      ' Content - Money - Electric and electronic devices - Stock - Valuable - Machinery - Building',
-    peril: 'fire',
-    damage: 'Material Damage Direct financial loss of insured physical damage',
-    trigger: 'Occurrence',
-  },
-  {
-    coverageUuid: 'large-corp-property-felxa-bi/1600011126',
-    coverageName: 'Coverage_Large Corp Property_FLEXA (BI)',
-    coverageType: 'main-coverage',
-    coverageDescription:
-      'Direct financial consequence of a physical loss or physical damage to tangible covered property on described premises resulting from Fire incl. Smoke, Lightning, Explosion and Aircraft Impact.',
-    insuredEntity:
-      'Gorss Earning, Gross Profit, Fixed costs, Loss of Income (Income), Loss of rental revenue (Rent)',
-    peril: 'Fire incl. Smoke , Lightning, Explosion, Aircraft Impact, Smoke',
-    damage: 'Direct financial loss of insured physical damage ',
-    trigger: 'Occurrence',
-  },
-  {
-    coverageUuid: 'large-corp-property-fire-bi/1600011126',
-    coverageName: 'Coverage_Large Corp Property_Fire (BI)',
-    coverageType: 'sub-coverage',
-    parentCoverageRef: 'large-corp-property-felxa-bi/1600011126',
-    coverageDescription:
-      'Direct financial consequence of a physical loss or physical damage to tangible covered property on described premises resulting from fire which is a process of burning which produces flames that send out heat and light and might produce smoke',
-    insuredEntity:
-      '- Additional increased cost of working, - Business (Person (Legal)), - Fixed costs, - Gross Profit (Profit), - Gross earnings, - Increased cost of working, - Loss of Income (Income), - Loss of rental (Rent), - Revenue',
-    peril: 'fire',
-    damage: 'Direct financial loss of insured physical damage ',
-    trigger: 'Occurrence',
+    formId: '8748250C5D6AD7B48825774D005C4DBB',
+    formName: 'AA 6870DEC 05 10',
+    formDescription: 'ANTIQUE AUTOMOBILE FLOATER DECLARATIONS',
+    questionNumber: '2',
+    questionId: 'i_3B90E',
+    questionText: 'Additional Insureds',
+    answerType: 'Text Area',
+    questionGrouping: 'Schedule of Coverage',
   },
 ];
 
